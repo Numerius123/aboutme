@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel</title>
+    <link rel="stylesheet" href="./index-style.css"/>
+</head>
+<body>
+    <h1>Daniel's Portfolio</h1>
+    <h2>I'm a web developer</h2>
+    <br/>
+
+    <h3><a id="AM" href="./public/about.html" onclick="playSound1(event)" onmouseover="playHoverSound(event)">About me</a></h3>
+    
+    <img src="./assets/media/me1.jpg" height="180" onclick="playSound4(event)"/>
+    <br/>
+    <br/>
+    
+    <h3><a id="WP" href="./public/web-projects.html" onclick="playSound2(event)" onmouseover="playHoverSound(event)">Web projects</a></h3>
+    <br/>
+    <h3><a id="CM" href="./public/contact.html" onclick="playSound3(event)" onmouseover="playHoverSound(event)">Contact me</a></h3>
+    
+    <footer>
+        <p>© 2025 Daniel's Code Canvas</p>
+    </footer>
+
+    <script>
+        var brAudio = new Audio("./assets/media/br.wav");
+
+        function playSound1(event) {
+            event.preventDefault();
+            
+            var audio = new Audio("./assets/media/bcr.wav");
+            var viewerVolume = 0.7; 
+            audio.volume = viewerVolume * audio.volume;
+            audio.play();
+            
+            setTimeout(function() {
+                window.location.href = event.target.href;
+            }, 180);
+        }
+        function playSound2(event) {
+            event.preventDefault();
+            
+            var audio = new Audio("./assets/media/bcr.wav");
+            var viewerVolume = 0.7;
+            audio.volume = viewerVolume * audio.volume;
+            audio.play();
+            
+            setTimeout(function() {
+                window.location.href = event.target.href;
+            }, 180);
+        }
+        function playSound3(event) {
+            event.preventDefault();
+            
+            var audio = new Audio("./assets/media/ls2.wav");
+            var viewerVolume = 0.7;
+            audio.volume = viewerVolume * audio.volume;
+            audio.play();
+            
+            setTimeout(function() {
+                window.location.href = event.target.href;
+            }, 180);
+        }
+        function playSound4(event) {
+            var audio = new Audio("./assets/media/b9.wav");
+            var viewerVolume = 0.6; 
+            audio.volume = viewerVolume * audio.volume;
+            audio.play();
+        }
+        function playHoverSound(event) {
+            brAudio.currentTime = 0;
+            brAudio.play();
+        }
+
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                
+                playHoverSound(event);
+            }
+        });
+    </script>
+</body>
+</html>

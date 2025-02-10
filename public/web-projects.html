@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Under Construction</title>
+  <link rel="stylesheet" href="./web-projects-style.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+  <hr>
+  <h3 id="typing-text"></h3>
+  <hr>
+
+  <script>
+    var text = "page under construction...";
+    var delay = 33; 
+    var typingTextElement = document.getElementById("typing-text");
+    
+    function typeEffect() {
+      var index = 0;
+      setTimeout(function() {
+        var typingInterval = setInterval(function() {
+          typingTextElement.textContent += text[index];
+          index++;
+          if (index >= text.length) {
+            clearInterval(typingInterval);
+          }
+        }, delay);
+      }, 35); 
+    }
+    
+    window.addEventListener("load", function() {
+      typeEffect();
+      playSound();
+    });
+
+    
+    function playSound() {
+      var audioOnce = new Audio("../assets/media/378396428.ogg");
+      var viewerVolume = 0.5; 
+      audioOnce.volume = viewerVolume * audioOnce.volume;
+      audioOnce.play();
+    }
+  </script>
+</body>
+</html>

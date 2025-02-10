@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="stylesheet" href="./about-style.css"/> 
+</head>
+<body>
+    <h1>About me <span id="dc-animation"><span class="circle"><span class="lambda">&lambda;</span></span></span></h1>
+    <hr/>
+
+    <h2>Education</h2>
+    <p><strong>Master's degree: Robotics and guidance systems</strong><br/>
+        Faculty of Automation, Computers and Electronics, Craiova<br/><br/>
+        Relevant programming courses:</p><br/>
+
+    <ul>
+        <li>Programming languages for databases</li>
+        <li>Industrial software</li>
+        <li>Computer-aided engineering</li>
+        <li>Automotive control</li>
+        <li>Mobile robots and microrobots</li>
+        <li>Bionics</li>
+        <li>Production engineering and modern technologies</li>
+        <li>Virtual instrumentation</li>
+    </ul>
+
+    <br/>
+    <p><b>Bachelor's degree: Mechatronics, Robotics</b><br/>
+        Faculty of Automation, Computers and Electronics, Craiova<br/>
+        </br>Relevant programming courses:</p>
+    <br/>
+
+    <ul>
+        <li>Computer programming and programming languages: C</li>
+        <li>Document processing</li>
+        <li>English for IT professionals</li>
+        <li>Computer-aided design (CAD)</li>
+        <li>Data bases</li>
+        <li>Data transmission</li>
+        <li>Object-oriented programming: C++, Java</li>
+        <li>Programming languages for robots</li>
+        <li>Computer architecture</li>
+        <li>Embedded systems</li>
+        <li>Information security technologies</li>
+        <li>Acquisition systems and interfaces</li>
+        <li>AI</li>
+        <li>Computer vision</li>
+        <li>Virtual manufacturing</li>
+    </ul>
+
+    <p><b>Bachelor's degree: International Relations and European Studies</b><br/>
+        Faculty of Law and Administrative Sciences, Craiova</p>
+
+
+    <h2>Courses</h2>
+    <p>HTML, CSS, Javascript, Node, Express, PostgreSQL, React<br/>
+        <!--Python--><br/>
+        <!--C++--></p>
+
+    <p>Continental Sibiu Corporate Scholarship</p>
+
+    <h2>Work experience</h2>
+    <p>Automation engineer<br/><br/>
+        QFort Romania<br/><br/>
+        Kautex(Textron) Romania</p>
+
+    <p>Business owner<br/>
+        SRL(owner)<br/><br/>
+        Other</p>
+
+    
+
+    <script src="./about.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+          setTimeout(function() {
+            var audioLoop = new Audio("../assets/media/tsa.mp3");
+            
+            
+            audioLoop.volume = 0.37 * audioLoop.volume;
+            
+            audioLoop.addEventListener('ended', function() {
+              this.currentTime = 0;
+              this.play();
+            }, false);
+            
+            audioLoop.play();
+          }, 400); // milisecunde
+        });
+      </script>
+</body>
+</html>
